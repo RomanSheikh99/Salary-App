@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <!-- title and fav icon  -->
+    <title>Dude Salary App</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    
+    <!-- web site style sheet start -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/nv.d3.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- web site style sheet end -->
+    
+    <!-- custom js links -->
+    <script defer src="scripts/salaryApp.js"></script>
+  	<script defer src="scripts/salaryData.js"></script>
+
+    <!-- js library links -->
+    <script src="scripts/d3.js"></script>
+    <script src="scripts/nv.d3.js"></script>
+
+  </head>
+  <body>
+
+    <!-- header section start  -->
+    <div class="text-center">
+      <h1 class="text-primary"><strong>JS Dude Salary App</strong></h1>
+      <p>Salary, the Promised amount you never get</small>
+    </div>
+    <!-- header section end  -->
+
+    <!-- from section start  -->
+    <div class="form-inline text-center">
+    	<div class="form-group">
+		    <input id='name' class="form-control" type='text' placeholder='Name'>
+		    <input id='salary' class="form-control" type='text'  placeholder='Salary'>
+		    <button id="AddRecord" class="btn btn-success form-control">Add Record</button>
+		    <button id="showLast" class="btn btn-info">Show Last</button>
+		    <button id="recordCount" class="btn btn-info">Record Count</button>
+    	</div>
+    </div>
+    <!-- from section end  -->
+	
+	  <div id="chart">
+    	<svg></svg>
+    </div>
+
+    <div id="dialog-last-item" class="hide dialog" title="Last Item in the Chart" >
+      <p>Name: <span id="showName" class="text-success"></span></p>
+      <p>Salary: <span id="showSalary" class="text-success"></span></p>
+    </div>
+    
+    <div id="dialog-error" class="hide dialog" title="Be careful Dude !" >
+      <p id="newNameLine">Name: <span id="newName" class="text-warning"></span></p>
+      <p id="newSalaryLine">Salary: <span id="newSalary" class="text-warning"></span></p>
+      <h2 class="text-danger">Your Boss is watching!</h2>
+    </div>
+
+	  <div id="dialog-record-count" class="hide dialog" title="Number of Records" >
+	    <p>Record count: <span id="numberOfRecords" class="text-success"></span></p>	  
+	  </div>
+
+    <h3 class="text-primary hide">Initial Count: <span id="initial-count"></span></h3>
+
+  </body>
+</html>  
